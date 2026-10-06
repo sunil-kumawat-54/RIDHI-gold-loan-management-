@@ -2,6 +2,11 @@
   command = "cd GMSfrontend && npm run build"
   publish = "GMSfrontend/build"
 
+[build.environment]
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
+  DISABLE_ESLINT_PLUGIN = "true"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
