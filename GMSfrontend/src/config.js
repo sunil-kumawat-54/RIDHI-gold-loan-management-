@@ -1,6 +1,6 @@
 const config = {
   
-  basename: '/vinsupgms',
+  basename: '',
   defaultPath: '/dashboard/default',
   fontFamily: `'Poppins', sans-serif`,
   borderRadius: 12,
