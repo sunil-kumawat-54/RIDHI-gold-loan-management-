@@ -1,7 +1,6 @@
 [build]
-  base = "GMSfrontend"
-  publish = "build"
-  command = "npm run build"
+  command = "cd GMSfrontend && npm run build"
+  publish = "GMSfrontend/build"
 
 [[redirects]]
   from = "/*"
