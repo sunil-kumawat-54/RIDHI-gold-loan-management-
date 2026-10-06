@@ -1,7 +1,6 @@
 [build]
-  base = "GMSfrontend"
   command = "npm run build"
-  publish = "GMSfrontend/build"
+  publish = "build"
 
 [build.environment]
   CI = "false"
