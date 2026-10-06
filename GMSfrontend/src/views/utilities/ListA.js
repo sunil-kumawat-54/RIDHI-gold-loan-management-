@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import img1 from '../pages/authentication/auth-forms/Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 //import { Storage } from 'aws-amplify';
 import {
     Box,
@@ -1492,7 +1492,7 @@ const List = () => {
             <img src={img1} alt="Logo" style={{ width: '100px', marginBottom: '10px' }} />
 
             <Typography variant="subtitle1">
-              <h1>VINSUP GMS</h1>
+              <h1>Riddhi</h1>
 
               <h3
                 style={{

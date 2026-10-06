@@ -2,7 +2,7 @@ import { Box, Button, Grid, Paper, Table, TableBody, TableCell, TableContainer, 
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactToPrint from 'react-to-print';
-import img1 from './Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 
 function BalanceSheet() {
   const printRef = useRef(null);
@@ -135,7 +135,7 @@ function BalanceSheet() {
       <div ref={printRef}>
             <img src={img1} alt="Logo" style={{ width: '100px', marginBottom: '10px' }} />
             <Typography variant="subtitle1">
-              <h2>VINSUP GMS</h2>
+              <h2>Riddhi</h2>
 
               <h3
                 style={{

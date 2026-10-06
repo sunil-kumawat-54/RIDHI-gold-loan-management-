@@ -13,7 +13,7 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 const app = express();
 const PORT = process.env.PORT;
-const HOSTNAME = process.env.HOSTNAME;
+const HOSTNAME = /your_host_name/i.test(process.env.HOSTNAME || '') ? 'localhost' : (process.env.HOSTNAME || 'localhost');
 
 const corsOptions = {
   origin: '*',
@@ -28,24 +28,21 @@ app.use(bodyParser.json());
 app.use('/api', apiRoutes);
 app.use('/auth', authRoutes);
 
+const localBuildPath = path.join(__dirname, 'build');
+const frontendBuildPath = path.join(__dirname, '..', 'GMSfrontend', 'build');
+const buildPath = fs.existsSync(path.join(localBuildPath, 'index.html')) ? localBuildPath : frontendBuildPath;
+
 // Serve static files
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(buildPath));
+app.use('/vinsupgms', express.static(buildPath));
 
 // Handle client-side routing by returning index.html for all routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
 
-// Create HTTPS server
-const options = {
-  cert: fs.readFileSync('D:/final srgold/newserver/cert/cert.pem'),
-  key: fs.readFileSync('D:/final srgold/newserver/cert/key.pem'),
-  passphrase: 'Vinsup@123.!@#', // Replace 'your-passphrase' with your actual passphrase
-};
-
-const server = https.createServer(options, app);
 const db = require('./db');
 // Start server
-server.listen(PORT, HOSTNAME, () => {
-  console.log(`Server is running at https://${HOSTNAME}:${PORT}`);
+app.listen(PORT, HOSTNAME, () => {
+  console.log(`Server is running at http://${HOSTNAME}:${PORT}`);
 });

@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
-import img1 from '../../pages/authentication/auth-forms/Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 
 const useStyles = makeStyles({
   table: {
@@ -113,7 +113,7 @@ export default function InterestReceivedonJLData() {
             <img src={img1} alt="Logo" style={{ width: '100px', marginBottom: '10px' }} />
 
             <Typography variant="subtitle1">
-              <h2>VINSUP GMS</h2>
+              <h2>Riddhi</h2>
 
               <h3
                 style={{

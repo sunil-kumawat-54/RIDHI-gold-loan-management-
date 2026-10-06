@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Box, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@mui/styles';
-import img1 from '../../pages/authentication/auth-forms/Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -301,7 +301,7 @@ export default function MonthlyData() {
           <div style={{ textAlign: 'center' }}>
             <img src={img1} alt="Logo" style={{ width: '100px', marginBottom: '10px' }} />
             <Typography variant="subtitle1">
-              <h2>VINSUP GMS</h2>
+              <h2>Riddhi</h2>
               <h3
                 style={{
                   borderBottom: '2px solid #000',

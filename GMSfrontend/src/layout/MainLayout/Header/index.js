@@ -71,7 +71,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
     // Darken the text color (adjust the value as needed)
   }}
 >
- VINSUP GMS
+ Riddhi
 </h1>
       {/* header search */}
   

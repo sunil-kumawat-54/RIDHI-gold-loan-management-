@@ -16,7 +16,7 @@ import {
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import ReactToPrint from 'react-to-print';
-import img1 from './Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 import './Print.css';
 
 import { Form, Row } from 'react-bootstrap';

@@ -7,11 +7,13 @@ import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from 'routes/AuthContext';
-import img1 from './Login.png';
+import Loader from 'ui-component/Loader';
+import img1 from 'assets/images/vinsup-logo.png';
 
 function Login() {
   const login=process.env.REACT_APP_BASE_URL
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const [values, setValues] = useState({
     phone_no: '',
@@ -55,6 +57,7 @@ function Login() {
         console.log(res.data);
 
         if (res.data.token) {
+          setIsLoggingIn(true);
           localStorage.setItem('token', res.data.token);
           // Assuming you receive the user role from the API response
           const userRole = res.data.email; // Replace 'role' with the actual field name in your API response
@@ -97,6 +100,10 @@ function Login() {
     }
   }, [isLoggedIn, navigate]);
 
+  if (isLoggingIn) {
+    return <Loader variant="login" />;
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -122,10 +129,11 @@ function Login() {
               justifyContent="center"
               alignItems="center"
               height="70px"
+              style={{ width: '96px', maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
             />
           </div>
 
-          <h2 style={{ color: '#7D0000', fontFamily: 'poppins' }}>VINSUP GMS</h2>
+          <h2 style={{ color: '#7D0000', fontFamily: 'poppins' }}>Riddhi</h2>
 
           <TextField
             margin="normal"

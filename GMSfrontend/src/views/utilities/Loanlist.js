@@ -8,7 +8,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../pages/authentication/auth-forms/Login.png';
+import img1 from 'assets/images/vinsup-logo.png';
 import './Print.css';
 const useStyles = makeStyles({
 
@@ -545,7 +545,7 @@ const Loanlist = () => {
             <div style={{ textAlign: 'center' }}>
               <img src={img1} alt="Logo" style={{ width: '100px', marginBottom: '10px' }} />
               <Typography variant="subtitle1">
-                <h1>VINSUP GMS</h1>
+                <h1>Riddhi</h1>
                 <h3
                   style={{
                     borderBottom: '2px solid #000',

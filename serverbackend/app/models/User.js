@@ -1,9 +1,7 @@
-const mysql = require("mysql");
 const bcrypt = require("bcrypt");
-const config = require("../../config/config");
 
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 
 const User = function (user) {

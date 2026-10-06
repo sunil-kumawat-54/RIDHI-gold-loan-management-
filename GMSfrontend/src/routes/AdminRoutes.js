@@ -11,6 +11,7 @@ import { useNavigate, Navigate } from 'react-router-dom';
 import MainLayout from 'layout/MainLayout';
 
 import Loadable from 'ui-component/Loadable';
+import Loader from 'ui-component/Loader';
 import Lazy from 'yup/lib/Lazy';
 
 // dashboard routing
@@ -138,7 +139,7 @@ const ProtectedMainLayout = (props) => {
   }, [isLoggedIn, verifyToken]);
 
   if (isLoading) {
-    return <div>Loading...</div>; // or a loading spinner
+    return <Loader />;
   }
 
   if (!isLoggedIn) {

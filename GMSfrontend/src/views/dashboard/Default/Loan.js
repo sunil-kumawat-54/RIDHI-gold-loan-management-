@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Box, Paper } from '@mui/material';
+import Loader from 'ui-component/Loader';
 import './TotalCustomer.css';
 
 
@@ -91,8 +92,14 @@ function Loan() {
           <hr />
           <center>
 
-            <h4 style={{ fontFamily: 'Popin', fontSize: '16px' ,color:'white'}}>
-              <span style={{ fontFamily: 'Popin', fontSize: '16px', color: 'white' }}>Total Loans:</span>  {loading ? 'Loading...' : error ? 'Error fetching data' : loanCount}</h4>
+            {loading ? (
+              <Loader inline />
+            ) : (
+              <h4 style={{ fontFamily: 'Popin', fontSize: '16px', color: 'white' }}>
+                <span style={{ fontFamily: 'Popin', fontSize: '16px', color: 'white' }}>Total Loans:</span>{' '}
+                {error ? 'Error fetching data' : loanCount}
+              </h4>
+            )}
 
           </center>
 

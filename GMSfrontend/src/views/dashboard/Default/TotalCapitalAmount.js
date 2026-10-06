@@ -1,5 +1,6 @@
 import { Box, Paper } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Loader from 'ui-component/Loader';
 import './TotalCustomer.css';
 
 function TotalCapitalAmount() {
@@ -38,6 +39,7 @@ function TotalCapitalAmount() {
   }
 };
 
+  fetchCapitalData();
   }, []);
 
   return (
@@ -55,7 +57,7 @@ function TotalCapitalAmount() {
         <hr />
         <br />
         {loading ? (
-          <p>Loading...</p>
+          <Loader inline />
         ) : error ? (
           <p>Error: {error}</p>
         ) : capitalAmount === '0' ? (

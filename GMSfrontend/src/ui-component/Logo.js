@@ -1,4 +1,4 @@
-import logo from 'assets/images/logo.svg';
+import logo from 'assets/images/vinsup-logo.png';
 
 const Logo = () => {
 
@@ -6,7 +6,11 @@ const Logo = () => {
 
     <>
 
-      <img src={logo} alt="VINSUP GMS" width="70" align="center" /><br></br>
+      <img
+        src={logo}
+        alt="Riddhi"
+        style={{ width: 'clamp(56px, 8vw, 90px)', height: 'auto', display: 'block', margin: '0 auto' }}
+      /><br></br>
 
     </>
 
