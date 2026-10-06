@@ -43,6 +43,6 @@ app.get('*', (req, res) => {
 
 const db = require('./db');
 // Start server
-app.listen(PORT, HOSTNAME, () => {
-  console.log(`Server is running at http://${HOSTNAME}:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
 });
