@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const SuspenceCreditdb = function (suspencecreditdb) {
   this.suspence_credit_date = suspencecreditdb.suspence_credit_date;
@@ -55,3 +54,4 @@ SuspenceCreditdb.getAllSuspenceCreditdb = function (callback) {
     );
   };
 module.exports = SuspenceCreditdb;
+

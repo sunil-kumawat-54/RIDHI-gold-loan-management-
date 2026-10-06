@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const SuspenceDebitdb = function (suspencedebitdb) {
   this.suspence_debit_date = suspencedebitdb.suspence_debit_date.toString();;
@@ -55,3 +54,4 @@ SuspenceDebitdb.getAllSuspenceDebitdb = function (callback) {
     );
   };
 module.exports = SuspenceDebitdb;
+

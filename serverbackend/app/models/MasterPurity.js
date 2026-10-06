@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const MasterPurity = function (masterpurity) {
     this.master_purity = masterpurity.master_purity.toString();;
@@ -29,3 +28,4 @@ MasterPurity.getAllMasterPurity = function (callback) {
     });
   };
 module.exports = MasterPurity;
+

@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const CashOnHandDebit = function (cashonhanddebit) {
   this.cashonhand_debit_amount = cashonhanddebit.cashonhand_debit_amount.toString();;
@@ -33,3 +32,4 @@ CashOnHandDebit.getAllCashOnHandDebit = function (callback) {
   };
 
 module.exports = CashOnHandDebit;
+

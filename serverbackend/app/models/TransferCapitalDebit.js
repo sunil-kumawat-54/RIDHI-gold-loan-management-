@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const TransferCapitalDebit = function (transfercapitaldebit) {
   this.transfercapital_debit_amount = transfercapitaldebit.transfercapital_debit_amount.toString();
@@ -46,3 +42,4 @@ TransferCapitalDebit.getAllTransferCapitalDebit = function (callback) {
 };
 
 module.exports = TransferCapitalDebit;
+

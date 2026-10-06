@@ -1,9 +1,7 @@
-const mysql = require('mysql2');
-const config = require("../../config/config");
 const cron = require("node-cron");
 const { format } = require("date-fns");
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const CashScroll = function (cashscroll) {
   this.opening_amount = cashscroll.opening_amount.toString();
@@ -162,3 +160,4 @@ cron.schedule('0 0 * * *', function () {
 
 
 module.exports = CashScroll;
+

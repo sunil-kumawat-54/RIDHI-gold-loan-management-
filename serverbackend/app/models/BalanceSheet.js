@@ -1,10 +1,6 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
 const cron = require("node-cron");
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const BalanceSheet = function (balancesheet) {
   this.date = balancesheet.date.toString();
@@ -143,3 +139,4 @@ cron.schedule("0 0 * * *", () => {
 });
 
 module.exports = BalanceSheet;
+

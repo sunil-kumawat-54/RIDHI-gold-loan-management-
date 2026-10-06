@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
  
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
  
 const ExpencesDebit = function (expencesdebit) {
   this.expences_debit_amount = expencesdebit.expences_debit_amount;
@@ -33,3 +32,4 @@ ExpencesDebit.getAllExpencesDebit = function (callback) {
   };
  
 module.exports = ExpencesDebit;
+

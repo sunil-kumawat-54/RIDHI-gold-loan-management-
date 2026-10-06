@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const BankCredit = function (bankcredit) {
   this.bankaccount_credit_amount =
@@ -45,3 +41,4 @@ BankCredit.getAllBankCredit = function (callback) {
 };
 
 module.exports = BankCredit;
+

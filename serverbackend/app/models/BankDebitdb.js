@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const BankDebitdb = function (bankdebitdb) {
   this.bank_debit_date = bankdebitdb.bank_debit_date;
@@ -75,3 +71,4 @@ BankDebitdb.updateBankDebitdbById = function (
 };
 
 module.exports = BankDebitdb;
+

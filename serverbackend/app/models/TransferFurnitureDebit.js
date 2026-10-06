@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const TransferFurnitureDebit = function (transferfurnituredebit) {
   this.transferfurniture_debit_amount = transferfurnituredebit.transferfurniture_debit_amount.toString();
@@ -46,3 +42,4 @@ TransferFurnitureDebit.getAllTransferFurnitureDebit = function (callback) {
 };
 
 module.exports = TransferFurnitureDebit;
+

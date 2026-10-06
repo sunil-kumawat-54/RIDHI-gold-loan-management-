@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const MasterJewelType = function (masterjeweltype) {
     this.jeweltype_name = masterjeweltype.jeweltype_name.toString();;
@@ -30,3 +29,4 @@ MasterJewelType.getAllMasterJewelType = function (callback) {
     });
   };
 module.exports = MasterJewelType;
+

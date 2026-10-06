@@ -1,7 +1,4 @@
-const mysql = require('mysql2');
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const LoanApprovalDetails = function (loanapprovaldetails) {
   this.customer_id = loanapprovaldetails.customer_id;
@@ -101,3 +98,4 @@ LoanApprovalDetails.deleteLoanApprovalDetailsById = function (loanapprovaldetail
 
 
 module.exports = LoanApprovalDetails;
+

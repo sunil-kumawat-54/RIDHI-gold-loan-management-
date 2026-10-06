@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const TransferProfitandlossCredit = function (transferprofitandlosscredit) {
   this.transferprofitandloss_credit_amount = transferprofitandlosscredit.transferprofitandloss_credit_amount.toString();
@@ -46,3 +42,4 @@ TransferProfitandlossCredit.getAllTransferProfitandlossCredit = function (callba
 };
 
 module.exports = TransferProfitandlossCredit;
+

@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const FurnitureDebitdb = function (furnituredebitdb) {
   this.furniture_debit_date = furnituredebitdb.furniture_debit_date.toString();;
@@ -55,3 +54,4 @@ FurnitureDebitdb.getAllFurnitureDebitdb = function (callback) {
     );
   };
 module.exports = FurnitureDebitdb;
+

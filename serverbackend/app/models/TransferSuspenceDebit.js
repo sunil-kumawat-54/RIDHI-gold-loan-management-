@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const TransferSuspenceDebit = function (transfersuspencedebit) {
   this.transfersuspence_debit_amount = transfersuspencedebit.transfersuspence_debit_amount.toString();
@@ -40,3 +36,4 @@ TransferSuspenceDebit.getAllTransferSuspenceDebit = function (callback) {
 };
 
 module.exports = TransferSuspenceDebit;
+

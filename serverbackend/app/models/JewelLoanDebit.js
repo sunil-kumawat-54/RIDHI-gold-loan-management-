@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const JewelLoanDebit = function (jewelloandebit) {
   this.jewelloan_debit_amount =
@@ -45,3 +41,4 @@ JewelLoanDebit.getAllJewelLoanDebit = function (callback) {
 };
 
 module.exports = JewelLoanDebit;
+

@@ -1,9 +1,8 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 const os = require('os');
 const http = require('http');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const UserLog = function (userlog) {
     this.name = userlog.name;
@@ -62,3 +61,4 @@ UserLog.updateUserLogById = function (userlogId, updatedUserLog, result) {
 };
 
 module.exports = UserLog;
+

@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const SalaryDetails = function (salarydetails) {
   this.employee_name=salarydetails.employee_name;
@@ -40,3 +39,4 @@ SalaryDetails.getAllSalaryDetails = function (callback) {
   };
 
 module.exports = SalaryDetails;
+

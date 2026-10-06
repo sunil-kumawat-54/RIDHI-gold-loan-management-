@@ -1,7 +1,4 @@
-const mysql = require('mysql2');
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const CashScrollDenomination = function (CashScrollDenomination) {
   this.csc_count500 = CashScrollDenomination.csc_count500;
@@ -42,3 +39,4 @@ CashScrollDenomination.getAllCashScrollDenomination = function (callback) {
 };
 
 module.exports = CashScrollDenomination;
+

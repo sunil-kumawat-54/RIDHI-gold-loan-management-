@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const ProfitAndLossCredit = function (profitandlosscredit) {
   this.profitandloss_credit_amount =
@@ -50,3 +46,4 @@ ProfitAndLossCredit.getAllProfitAndLossCredit = function (callback) {
 };
 
 module.exports = ProfitAndLossCredit;
+

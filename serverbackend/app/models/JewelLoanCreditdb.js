@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const JewelLoanCreditdb = function (jewelloancreditdb) {
   this.jewelloandb_credit_date =
@@ -82,3 +78,4 @@ JewelLoanCreditdb.updateJewelLoanCreditdbById = function (
 };
 
 module.exports = JewelLoanCreditdb;
+

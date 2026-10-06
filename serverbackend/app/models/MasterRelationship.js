@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 const MasterRelationship = function (masterrelationship) {
     this.relation_type = masterrelationship.relation_type.toString();;
 };
@@ -28,3 +27,4 @@ MasterRelationship.getAllMasterRelationship = function (callback) {
     });
   };
 module.exports = MasterRelationship;
+

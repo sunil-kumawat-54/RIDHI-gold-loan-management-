@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const TransferJewelloanCredit = function (transferjewelloancredit) {
   this.transferjewelloan_credit_amount = transferjewelloancredit.transferjewelloan_credit_amount.toString();
@@ -46,3 +42,4 @@ TransferJewelloanCredit.getAllTransferJewelloanCredit = function (callback) {
 };
 
 module.exports = TransferJewelloanCredit;
+

@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const ProfitAndLossDebitdb = function (profitandlossdebitdb) {
   this.profitandlossdb_debit_date = profitandlossdebitdb.profitandlossdb_debit_date;
@@ -75,3 +71,4 @@ ProfitAndLossDebitdb.updateProfitAndLossDebitdbById = function (
 };
 
 module.exports = ProfitAndLossDebitdb;
+

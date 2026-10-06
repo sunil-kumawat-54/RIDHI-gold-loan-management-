@@ -1,6 +1,5 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 const MasterLoanScheme = function (masterloanscheme) {
     this.masterloan_scheme = masterloanscheme.masterloan_scheme.toString();;
 };
@@ -27,3 +26,4 @@ MasterLoanScheme.getAllMasterLoanScheme = function (callback) {
     });
   };
 module.exports = MasterLoanScheme;
+

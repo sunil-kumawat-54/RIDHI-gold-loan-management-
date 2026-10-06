@@ -1,7 +1,6 @@
-const mysql = require('mysql2');
 const config = require('../../config/config');
 
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const MasterCity = function (mastercity) {
   this.city_name = mastercity.city_name.toString();;
@@ -33,3 +32,4 @@ MasterCity.getAllMasterCity = function (callback) {
     });
   };
 module.exports = MasterCity;
+

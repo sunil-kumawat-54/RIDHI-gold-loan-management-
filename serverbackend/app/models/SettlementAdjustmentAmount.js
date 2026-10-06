@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const SettlementAdjustmentAmount = function (settlementadjustmentamount) {
   this.loan_id = settlementadjustmentamount.loan_id; // Include the loan_id field
@@ -38,3 +34,4 @@ SettlementAdjustmentAmount.getAllSettlementAdjustmentAmount = function (callback
 };
 
 module.exports = SettlementAdjustmentAmount;
+

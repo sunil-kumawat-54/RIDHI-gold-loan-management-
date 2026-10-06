@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const CapitalCredit = function (capitalcredit) {
   this.capital_credit_amount = capitalcredit.capital_credit_amount.toString();
@@ -46,3 +42,4 @@ CapitalCredit.getAllCapitalCredit = function (callback) {
 };
 
 module.exports = CapitalCredit;
+

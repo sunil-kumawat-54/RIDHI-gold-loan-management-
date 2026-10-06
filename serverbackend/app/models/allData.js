@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 // Define the JewelDetail model
 
@@ -35,3 +31,4 @@ const JewelDetail = {
 // Export the JewelDetail model
 
 module.exports = JewelDetail;
+

@@ -1,8 +1,4 @@
-const mysql = require('mysql2');
-
-const config = require("../../config/config");
-
-const connection = mysql.createConnection(config.database);
+const connection = require("../../db");
 
 const CapitalCreditdb = function (capitalcreditdb) {
   // Check if properties are defined before trying to convert to string
@@ -85,3 +81,4 @@ CapitalCreditdb.updateCapitalCreditdbById = function (
 };
 
 module.exports = CapitalCreditdb;
+
